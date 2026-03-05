@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.baith5.adapters.SimpleMemberAdapter;
 import com.example.baith5.database.DatabaseHelper;
 import com.example.baith5.models.Group;
 import com.example.baith5.models.Member;
@@ -27,7 +28,7 @@ public class SelectMemberActivity extends AppCompatActivity {
     private Button btnSave, btnBack;
     private DatabaseHelper dbHelper;
     private SharedPreferences prefs;
-    private ArrayAdapter<Member> allMembersAdapter, groupMembersAdapter;
+    private SimpleMemberAdapter allMembersAdapter, groupMembersAdapter;
     private List<Member> allMembers, groupMembers;
     private int selectedGroupId = -1;
 
@@ -149,12 +150,10 @@ public class SelectMemberActivity extends AppCompatActivity {
     }
 
     private void updateAdapters() {
-        allMembersAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, allMembers);
+        allMembersAdapter = new SimpleMemberAdapter(this, allMembers);
         listViewAllMembers.setAdapter(allMembersAdapter);
 
-        groupMembersAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, groupMembers);
+        groupMembersAdapter = new SimpleMemberAdapter(this, groupMembers);
         listViewGroupMembers.setAdapter(groupMembersAdapter);
     }
 }
