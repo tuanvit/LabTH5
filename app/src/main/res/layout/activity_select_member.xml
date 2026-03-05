@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_dark"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHỌN THÀNH VIÊN VÀO NHÓM"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Group Selection Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chọn nhóm:"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:background="@drawable/spinner_background"/>
+
+            </LinearLayout>
+
+            <!-- Members Lists -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- All Members List -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:elevation="2dp"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Danh sách sinh viên"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <ListView
+                        android:id="@+id/listViewAllMembers"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/list_background"
+                        android:divider="@color/divider"
+                        android:dividerHeight="1dp"
+                        android:padding="8dp"/>
+
+                </LinearLayout>
+
+                <!-- Arrow Button -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:id="@+id/btnAddToGroup"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:text="➡"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_primary"
+                        android:elevation="4dp"/>
+
+                </LinearLayout>
+
+                <!-- Group Members List -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:elevation="2dp"
+                    android:padding="12dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thành viên nhóm"
+                        android:textSize="13sp"
+                        android:textColor="@color/text_primary"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                    <ListView
+                        android:id="@+id/listViewGroupMembers"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/list_background"
+                        android:divider="@color/divider"
+                        android:dividerHeight="1dp"
+                        android:padding="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LƯU"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/button_primary"
+                android:elevation="2dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QUAY LẠI"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_secondary"
+                android:elevation="2dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

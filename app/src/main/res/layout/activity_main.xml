@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DangKyNhomDeTai"
+                android:textSize="24sp"
+                android:textColor="@color/text_primary"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ĐĂNG KÝ ĐỀ TÀI HỌC PHẦN\nLẬP TRÌNH ANDROID"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Group Info Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thông tin nhóm"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvSelectedGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhóm được chọn: Chưa chọn"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                android:layout_marginVertical="8dp"/>
+
+            <TextView
+                android:id="@+id/tvGroupMembers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Danh sách thành viên nhóm:\nChưa có thành viên"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Result Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kết quả đăng ký đề tài"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chưa có kết quả đăng ký"
+                android:textSize="15sp"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:minHeight="50dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@color/background_light"/>
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chức năng"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnSelectMember"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHỌN THÀNH VIÊN"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_primary"
+            android:elevation="2dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnSelectGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHỌN NHÓM"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_primary"
+            android:elevation="2dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnSelectThesis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHỌN ĐỀ TÀI"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_primary"
+            android:elevation="2dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THOÁT"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_secondary"
+            android:elevation="2dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</ScrollView>
